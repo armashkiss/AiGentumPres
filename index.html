@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#080a0d" />
   <meta name="description" content="AIgentum — индивидуальная корпоративная ИИ-среда для крупных предприятий." />
   <title>AIgentum — Enterprise AI Environment</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +12,18 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="boot" id="boot" aria-hidden="true">
+    <div class="boot-inner">
+      <div class="boot-brand"><span>AI</span>gentum</div>
+      <div class="boot-line"><i></i></div>
+      <div class="boot-meta">ENTERPRISE INTELLIGENCE / INITIALIZING</div>
+    </div>
+  </div>
+
   <div class="noise"></div>
+  <div class="metal-haze"></div>
+  <canvas id="metal-scene" aria-hidden="true"></canvas>
+
   <header class="topbar">
     <a class="brand" href="#hero" aria-label="AIgentum Home">
       <span class="brand-mark">AI</span><span>gentum</span>
@@ -23,107 +35,95 @@
       <a href="#security">Контроль</a>
       <a href="#implementation">Внедрение</a>
     </nav>
-    <a class="top-cta" href="#contact">Обсудить пилот</a>
+    <a class="top-cta magnetic" href="https://wa.me/77066733824?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%20AIgentum." target="_blank" rel="noopener noreferrer">Обсудить проект</a>
   </header>
 
   <main>
-    <section id="hero" class="section hero">
+    <section id="hero" class="section hero" data-index="00">
       <div class="hero-bg"><img src="assets/hero-agent-hub.png" alt="Futuristic AI agent network" /></div>
       <div class="section-inner hero-inner">
+        <div class="statusline"><span class="pulse"></span> INDIVIDUAL ENTERPRISE AI PROJECT</div>
         <p class="eyebrow">Enterprise AI Environment</p>
-        <h1><span>AIgentum</span><br/>ИИ‑среда, созданная под ваше предприятие</h1>
+        <h1><span class="metal-text">AIgentum</span><br/>ИИ‑среда, созданная под ваше предприятие</h1>
         <p class="lead">Не коробочный чат-бот. Индивидуальный проект корпоративной среды ИИ‑агентов, который работает с документами, проектами, аналитикой, задачами и решениями компании.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#concept">Смотреть концепт</a>
-          <a class="button ghost" href="#benefits">Выгода для бизнеса</a>
+          <a class="button primary magnetic" href="#concept">Смотреть концепт <i>↘</i></a>
+          <a class="button ghost magnetic" href="#benefits">Выгода для бизнеса</a>
         </div>
         <div class="signal-row" aria-label="Ключевые принципы">
           <span>Agents</span><span>Knowledge</span><span>Voice</span><span>Security</span><span>Integrations</span>
         </div>
       </div>
+      <div class="scroll-cue" aria-hidden="true"><span>SCROLL</span><i></i></div>
     </section>
 
-    <section id="problem" class="section problem">
+    <section id="problem" class="section problem" data-index="01">
       <div class="section-inner split">
         <div>
           <p class="eyebrow">Проблема крупных компаний</p>
-          <h2>Решения принимаются медленнее, потому что знания разбросаны</h2>
+          <h2>Знания разбросаны. Решения собираются вручную.</h2>
           <p class="copy">Документы, цифры, проекты, риски, договорённости и поручения живут в разных системах, папках и головах сотрудников. Руководитель получает фрагменты, а не единую картину.</p>
         </div>
-        <div class="problem-grid">
-          <div>Документы</div>
-          <div>Excel</div>
-          <div>Почта</div>
-          <div>Jira</div>
-          <div>BI</div>
-          <div>ERP</div>
-          <div>Git</div>
-          <div>Чаты</div>
-          <div>Личные папки</div>
+        <div class="problem-grid tilt-group">
+          <div>Документы</div><div>Excel</div><div>Почта</div>
+          <div>Jira</div><div>BI</div><div>ERP</div>
+          <div>Git</div><div>Чаты</div><div>Личные папки</div>
         </div>
       </div>
     </section>
 
-    <section id="concept" class="section concept">
+    <section id="concept" class="section concept" data-index="02">
       <div class="section-inner split reverse">
-        <div class="media-frame"><img src="assets/boardroom-command.png" alt="Executive boardroom with AI dashboards" /></div>
+        <div class="media-frame tilt-card"><img src="assets/boardroom-command.png" alt="Executive boardroom with AI dashboards" /></div>
         <div>
           <p class="eyebrow">Концепт</p>
           <h2>Индивидуальный проект, а не универсальная коробка</h2>
-          <p class="copy">AIgentum проектируется вокруг структуры конкретного предприятия: подразделений, прав доступа, источников данных, проектного управления, отраслевых процессов и управленческой логики.</p>
+          <p class="copy">AIgentum проектируется вокруг конкретного предприятия: его структуры, прав доступа, источников данных, проектного управления, отраслевых процессов и управленческой логики.</p>
           <div class="principles">
-            <span>Обследование</span>
-            <span>Проектирование</span>
-            <span>Пилот</span>
-            <span>Интеграции</span>
-            <span>Масштабирование</span>
+            <span>Обследование</span><span>Проектирование</span><span>Пилот</span><span>Интеграции</span><span>Масштабирование</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="solution" class="section solution">
+    <section id="solution" class="section solution" data-index="03">
       <div class="section-inner center">
         <p class="eyebrow">Решение</p>
         <h2>Цифровой штаб предприятия</h2>
         <p class="wide-copy">AIgentum объединяет корпоративную память, специализированных агентов, голосовой вход, интеграции и контроль действий в единую среду. Система не заменяет управленцев — она собирает факты, анализирует и готовит решения.</p>
         <div class="orbit">
-          <div class="core">AIgentum<br/><small>Core</small></div>
-          <div class="node n1">PMO</div>
-          <div class="node n2">Finance</div>
-          <div class="node n3">Legal</div>
-          <div class="node n4">IT</div>
-          <div class="node n5">Operations</div>
-          <div class="node n6">Strategy</div>
+          <div class="core"><span>AIgentum</span><small>Core</small></div>
+          <div class="node n1">PMO</div><div class="node n2">Finance</div><div class="node n3">Legal</div>
+          <div class="node n4">IT</div><div class="node n5">Operations</div><div class="node n6">Strategy</div>
         </div>
       </div>
     </section>
 
-    <section id="agents" class="section agents">
+    <section id="agents" class="section agents" data-index="04">
       <div class="section-inner split">
         <div>
           <p class="eyebrow">AI‑агенты</p>
-          <h2>Каждое подразделение получает своего цифрового специалиста</h2>
-          <p class="copy">Агенты работают не как один общий чат, а как специализированная команда: проектный менеджер, бизнес‑аналитик, финансовый аналитик, инженер, исследователь, ревьюер и отраслевые роли.</p>
+          <h2>Не один чат. Команда цифровых специалистов.</h2>
+          <p class="copy">Каждый агент получает свою роль и контекст: проектный менеджер, бизнес‑аналитик, финансовый аналитик, инженер, исследователь, ревьюер и отраслевые специалисты.</p>
         </div>
         <div class="agent-list">
-          <article><b>Executive Agent</b><span>сводки, решения, контроль</span></article>
-          <article><b>PMO Agent</b><span>проекты, риски, поручения</span></article>
-          <article><b>Finance Agent</b><span>отклонения, модели, сценарии</span></article>
-          <article><b>Legal / Contract Agent</b><span>договоры, обязательства, риски</span></article>
-          <article><b>Operations Agent</b><span>объекты, инциденты, процессы</span></article>
-          <article><b>IT / Architecture Agent</b><span>системы, код, интеграции</span></article>
+          <article class="tilt-card"><b>Executive Agent</b><span>сводки, решения, контроль</span></article>
+          <article class="tilt-card"><b>PMO Agent</b><span>проекты, риски, поручения</span></article>
+          <article class="tilt-card"><b>Finance Agent</b><span>отклонения, модели, сценарии</span></article>
+          <article class="tilt-card"><b>Legal / Contract Agent</b><span>договоры, обязательства, риски</span></article>
+          <article class="tilt-card"><b>Operations Agent</b><span>объекты, инциденты, процессы</span></article>
+          <article class="tilt-card"><b>IT / Architecture Agent</b><span>системы, код, интеграции</span></article>
         </div>
       </div>
     </section>
 
-    <section id="knowledge" class="section knowledge">
+    <section id="knowledge" class="section knowledge" data-index="05">
       <div class="section-inner split reverse">
-        <div class="media-frame"><img src="assets/architecture-core.png" alt="AI architecture and enterprise data platform" /></div>
+        <div class="media-frame tilt-card"><img src="assets/architecture-core.png" alt="AI architecture and enterprise data platform" /></div>
         <div>
           <p class="eyebrow">Корпоративная память</p>
-          <h2>Решения, документы и аналитика становятся управляемым знанием</h2>
-          <p class="copy">Система формирует слой корпоративной памяти: проекты, требования, риски, решения, исследования, архитектура, действия и источники. Важное не теряется в чатах и не зависит от одного сотрудника.</p>
+          <h2>Знание становится активом предприятия</h2>
+          <p class="copy">Проекты, требования, риски, решения, исследования, архитектура, действия и источники связываются в единую управляемую систему. Важное не растворяется в чатах и не зависит от одного сотрудника.</p>
           <ul class="feature-list">
             <li>Единая карта проектов и решений</li>
             <li>Связь документов, задач и аналитики</li>
@@ -133,99 +133,86 @@
       </div>
     </section>
 
-    <section id="voice" class="section voice">
+    <section id="voice" class="section voice" data-index="06">
       <div class="section-inner split">
         <div>
           <p class="eyebrow">Telegram + Voice</p>
-          <h2>Система принимает текст, голос и документы</h2>
-          <p class="copy">Сотрудник может продиктовать риск, поручение, идею или вопрос прямо в Telegram. Бот расшифрует голос, классифицирует запрос и передаст его нужному агенту — с подтверждением перед важными действиями.</p>
+          <h2>Сообщение становится действием системы</h2>
+          <p class="copy">Сотрудник может продиктовать риск, поручение, идею или вопрос прямо в Telegram. AIgentum распознаёт голос, понимает контекст, маршрутизирует запрос и запрашивает подтверждение перед важными действиями.</p>
           <div class="chat-examples">
-            <span>«Добавь риск по проекту»</span>
-            <span>«Дай сводку по нефтебазе»</span>
-            <span>«Создай поручение»</span>
+            <span>«Добавь риск по проекту»</span><span>«Дай сводку по нефтебазе»</span><span>«Создай поручение»</span>
           </div>
         </div>
-        <div class="media-frame"><img src="assets/telegram-voice.png" alt="Telegram voice interface connected to AI enterprise systems" /></div>
+        <div class="media-frame tilt-card"><img src="assets/telegram-voice.png" alt="Telegram voice interface connected to AI enterprise systems" /></div>
       </div>
     </section>
 
-    <section id="security" class="section security">
+    <section id="security" class="section security" data-index="07">
       <div class="section-inner split reverse">
-        <div class="media-frame"><img src="assets/security-control.png" alt="Cybersecurity control center protecting enterprise AI systems" /></div>
+        <div class="media-frame tilt-card"><img src="assets/security-control.png" alt="Cybersecurity control center protecting enterprise AI systems" /></div>
         <div>
           <p class="eyebrow">Безопасность и контроль</p>
           <h2>ИИ работает по правилам компании</h2>
-          <p class="copy">AIgentum не даёт агентам бесконтрольный доступ ко всему. Права, аудит, подтверждения и ограничения действий проектируются на уровне предприятия.</p>
+          <p class="copy">Доступы, роли, аудит, подтверждения и ограничения действий проектируются на уровне предприятия. Агент видит только то, что разрешено конкретному пользователю и процессу.</p>
           <div class="control-stack">
-            <span>RBAC / роли</span>
-            <span>Approval gates</span>
-            <span>Audit log</span>
-            <span>Data boundaries</span>
-            <span>Human‑in‑the‑loop</span>
+            <span>RBAC / роли</span><span>Approval gates</span><span>Audit log</span><span>Data boundaries</span><span>Human‑in‑the‑loop</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="benefits" class="section benefits">
+    <section id="benefits" class="section benefits" data-index="08">
       <div class="section-inner center">
         <p class="eyebrow">Выгода для предприятия</p>
-        <h2>AIgentum усиливает управленческий контур</h2>
+        <h2>Больше управляемости. Меньше потерь времени и контекста.</h2>
         <div class="benefit-grid">
-          <article><b>Скорость решений</b><span>Быстро собирает данные, контекст, риски и варианты действий.</span></article>
-          <article><b>Прозрачность проектов</b><span>Показывает статусы, зависимости, просрочки и открытые вопросы.</span></article>
-          <article><b>Меньше рутины</b><span>Автоматизирует подготовку сводок, аналитики, протоколов и поручений.</span></article>
-          <article><b>Качество аналитики</b><span>Разделяет факты, гипотезы, источники, gaps и confidence.</span></article>
-          <article><b>Сохранение знаний</b><span>Не даёт проектной памяти раствориться в переписках и личных файлах.</span></article>
-          <article><b>Контроль действий</b><span>Важные изменения проходят через утверждение человека.</span></article>
+          <article class="tilt-card"><b>Скорость решений</b><span>Собирает данные, контекст, риски и варианты действий в одном контуре.</span></article>
+          <article class="tilt-card"><b>Прозрачность проектов</b><span>Показывает статусы, зависимости, просрочки и открытые вопросы.</span></article>
+          <article class="tilt-card"><b>Меньше рутины</b><span>Автоматизирует сводки, аналитику, протоколы и подготовку поручений.</span></article>
+          <article class="tilt-card"><b>Качество аналитики</b><span>Разделяет факты, гипотезы, источники, gaps и уровень уверенности.</span></article>
+          <article class="tilt-card"><b>Сохранение знаний</b><span>Проектная память остаётся в компании, а не в переписках и личных файлах.</span></article>
+          <article class="tilt-card"><b>Контроль действий</b><span>Критичные изменения проходят через правила и подтверждение человека.</span></article>
         </div>
       </div>
     </section>
 
-    <section id="industry" class="section industry">
+    <section id="industry" class="section industry" data-index="09">
       <div class="section-inner split">
         <div>
           <p class="eyebrow">Для крупных предприятий</p>
-          <h2>Адаптация под отрасль, холдинг и реальные процессы</h2>
-          <p class="copy">AIgentum может быть собран под нефтяной холдинг, производство, финансы, строительство, медицину, логистику или государственные структуры. Внедрение учитывает дочерние компании, объекты, документы, роли и корпоративные правила.</p>
+          <h2>Одна платформа. Разная логика бизнеса.</h2>
+          <p class="copy">AIgentum собирается под отрасль, холдинг и реальные процессы. Внедрение учитывает дочерние компании, производственные объекты, документы, роли, ограничения и корпоративные правила.</p>
         </div>
         <div class="industry-cases">
-          <span>Нефтяной холдинг</span>
-          <span>Промышленность</span>
-          <span>Финансы</span>
-          <span>Строительство</span>
-          <span>Логистика</span>
-          <span>Healthcare</span>
+          <span>Нефтяной холдинг</span><span>Промышленность</span><span>Финансы</span>
+          <span>Строительство</span><span>Логистика</span><span>Healthcare</span>
         </div>
       </div>
     </section>
 
-    <section id="implementation" class="section implementation">
+    <section id="implementation" class="section implementation" data-index="10">
       <div class="section-inner center">
         <p class="eyebrow">Внедрение</p>
-        <h2>От пилота до корпоративной среды</h2>
+        <h2>От первого контура до корпоративной среды</h2>
         <div class="timeline">
-          <article><em>01</em><b>AI‑аудит</b><span>процессы, данные, роли, риски</span></article>
-          <article><em>02</em><b>Архитектура</b><span>безопасность, агенты, интеграции</span></article>
-          <article><em>03</em><b>Пилот</b><span>подразделение, реальные задачи, быстрый эффект</span></article>
-          <article><em>04</em><b>Масштабирование</b><span>холдинг, новые агенты, новые системы</span></article>
+          <article class="tilt-card"><em>01</em><b>AI‑аудит</b><span>процессы, данные, роли, риски</span></article>
+          <article class="tilt-card"><em>02</em><b>Архитектура</b><span>безопасность, агенты, интеграции</span></article>
+          <article class="tilt-card"><em>03</em><b>Пилот</b><span>подразделение, реальные задачи, измеримый эффект</span></article>
+          <article class="tilt-card"><em>04</em><b>Масштабирование</b><span>холдинг, новые агенты, новые системы</span></article>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section contact">
+    <section id="contact" class="section contact" data-index="11">
       <div class="section-inner contact-inner">
         <p class="eyebrow">AIgentum</p>
-        <h2>Индивидуальная ИИ‑среда для предприятия, которое хочет управлять знаниями, проектами и решениями быстрее</h2>
-        <p class="wide-copy">Начните с пилота: один контур, реальные данные, измеримая польза и архитектура, готовая к масштабированию.</p>
+        <h2>Спроектируем ИИ‑среду вокруг вашего предприятия</h2>
+        <p class="wide-copy">Начнём с ваших процессов, данных и задач. Без универсальной коробки — только архитектура, которая имеет смысл именно для вашей компании.</p>
         <div class="contact-panel">
-          <span>AI Assessment</span>
-          <span>Enterprise Pilot</span>
-          <span>Agent Packs</span>
-          <span>Telegram Voice</span>
-          <span>Knowledge Layer</span>
+          <span>AI Assessment</span><span>Enterprise Pilot</span><span>Agent Packs</span><span>Telegram Voice</span><span>Knowledge Layer</span>
         </div>
-        <a class="button primary big" href="mailto:hello@aigentum.ai">Обсудить проект</a>
+        <a class="button primary big magnetic" href="https://wa.me/77066733824?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%B8%D0%BD%D0%B4%D0%B8%D0%B2%D0%B8%D0%B4%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%20AIgentum." target="_blank" rel="noopener noreferrer">Обсудить проект в WhatsApp <i>↗</i></a>
+        <p class="contact-note">WhatsApp · +7 706 673 38 24</p>
       </div>
     </section>
   </main>
@@ -233,5 +220,6 @@
   <aside class="slide-nav" aria-label="Навигация по экранам"></aside>
   <div class="progress"><span></span></div>
   <script src="app.js"></script>
+  <script type="module" src="three-scene.js"></script>
 </body>
 </html>

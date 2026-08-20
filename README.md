@@ -1,22 +1,16 @@
-# AIgentum Landing Presentation
+# AIgentum Landing
 
-Статический лендинг-презентация для GitHub Pages.
+Static GitHub Pages landing for **AIgentum — Enterprise AI Environment**.
 
-## Локальный запуск
+## Included
+- metallic graphite/silver visual system;
+- Three.js ambient WebGL agent network;
+- scroll/reveal, card tilt and magnetic CTA motion;
+- responsive/mobile fallback and `prefers-reduced-motion` support;
+- WhatsApp CTA to `+7 706 673 38 24`;
+- static deployment: no build step, no GitHub Actions required.
 
-Откройте `index.html` в браузере или запустите простой сервер:
+## GitHub Pages
+Use **Settings → Pages → Deploy from a branch → main → /(root)**.
 
-```bash
-python3 -m http.server 8080
-```
-
-## Публикация через GitHub Pages
-
-1. Создайте репозиторий.
-2. Загрузите файлы из этой папки.
-3. В Settings → Pages выберите GitHub Actions.
-4. Workflow `.github/workflows/deploy.yml` опубликует сайт автоматически.
-
-## Концепция
-
-AIgentum — индивидуальная корпоративная ИИ-среда для крупных предприятий: AI-агенты, корпоративная память, Telegram/Voice, интеграции и контроль действий.
+The Three.js module is loaded from jsDelivr (`three@0.185.1`). If it is unavailable, the landing remains fully usable with a static fallback.
