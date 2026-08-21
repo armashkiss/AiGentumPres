@@ -1,16 +1,14 @@
-# AIgentum Landing
+# AIgentum — Enterprise AI Environment
 
-Static GitHub Pages landing for **AIgentum — Enterprise AI Environment**.
+Static GitHub Pages landing / presentation.
 
-## Included
-- metallic graphite/silver visual system;
-- Three.js ambient WebGL agent network;
-- scroll/reveal, card tilt and magnetic CTA motion;
-- responsive/mobile fallback and `prefers-reduced-motion` support;
-- WhatsApp CTA to `+7 706 673 38 24`;
-- static deployment: no build step, no GitHub Actions required.
+## Visual system
+- full-color cinematic enterprise imagery
+- restrained metallic silver palette
+- Three.js interactive AI core
+- pointer-responsive light and image parallax
+- staged scroll reveals and micro-interactions
+- reduced-motion fallback
 
-## GitHub Pages
-Use **Settings → Pages → Deploy from a branch → main → /(root)**.
-
-The Three.js module is loaded from jsDelivr (`three@0.185.1`). If it is unavailable, the landing remains fully usable with a static fallback.
+## Deploy
+Publish from `main` / root in GitHub Pages. No custom Actions workflow is required.

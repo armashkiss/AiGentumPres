@@ -64,3 +64,66 @@ window.addEventListener('load', () => {
   window.setTimeout(() => document.getElementById('boot')?.classList.add('hide'), reducedMotion ? 50 : 650);
 });
 window.setTimeout(() => document.getElementById('boot')?.classList.add('hide'), 1800);
+
+// Premium motion layer: pointer light, image parallax and staged reveals.
+if (!reducedMotion) {
+  const orb = document.createElement('div');
+  orb.className = 'cursor-orb';
+  document.body.appendChild(orb);
+
+  let ox = innerWidth * .75, oy = innerHeight * .25;
+  let tx = ox, ty = oy;
+  const follow = () => {
+    ox += (tx - ox) * .075;
+    oy += (ty - oy) * .075;
+    orb.style.transform = `translate3d(${ox}px,${oy}px,0)`;
+    requestAnimationFrame(follow);
+  };
+  follow();
+
+  window.addEventListener('pointermove', e => {
+    tx = e.clientX; ty = e.clientY;
+    document.body.style.setProperty('--mx', `${(e.clientX / innerWidth) * 100}%`);
+    document.body.style.setProperty('--my', `${(e.clientY / innerHeight) * 100}%`);
+
+    const hx = (e.clientX / innerWidth - .5) * -10;
+    const hy = (e.clientY / innerHeight - .5) * -7;
+    document.documentElement.style.setProperty('--hero-x', `${hx}px`);
+    document.documentElement.style.setProperty('--hero-y', `${hy}px`);
+  }, { passive: true });
+
+  document.querySelectorAll('.media-frame').forEach(frame => {
+    frame.addEventListener('pointermove', e => {
+      const r = frame.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width;
+      const py = (e.clientY - r.top) / r.height;
+      frame.style.setProperty('--fx', `${px * 100}%`);
+      frame.style.setProperty('--fy', `${py * 100}%`);
+      frame.style.setProperty('--img-x', `${(px - .5) * -10}px`);
+      frame.style.setProperty('--img-y', `${(py - .5) * -7}px`);
+    });
+    frame.addEventListener('pointerleave', () => {
+      frame.style.setProperty('--img-x', '0px');
+      frame.style.setProperty('--img-y', '0px');
+    });
+  });
+
+  document.querySelectorAll('.problem-grid div, .agent-list article, .benefit-grid article, .timeline article, .industry-cases span').forEach(card => {
+    card.addEventListener('pointermove', e => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--gx', `${((e.clientX-r.left)/r.width)*100}%`);
+      card.style.setProperty('--gy', `${((e.clientY-r.top)/r.height)*100}%`);
+    });
+  });
+
+  sections.forEach(section => {
+    [...section.querySelectorAll('.reveal')].forEach((el, i) => {
+      el.style.setProperty('--delay', `${Math.min(i * 65, 320)}ms`);
+    });
+  });
+}
+
+const sectionObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => entry.target.classList.toggle('is-active', entry.isIntersecting && entry.intersectionRatio > .32));
+}, { threshold: [0, .32, .62] });
+sections.forEach(s => sectionObserver.observe(s));
